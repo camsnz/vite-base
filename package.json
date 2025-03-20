@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "files": [
+  "exports": [
     "./postcss.config.js",
     "./tailwind.config.js",
     "./tsconfig.json",
@@ -17,6 +17,10 @@
     "react-dom": "^19.0.0",
     "tailwindcss": "^4.0.14"
   },
+  "bundleDependencies": [
+    "vite",
+    "typescript"
+  ],
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.6",
     "@storybook/addon-essentials": "^8.6.7",
