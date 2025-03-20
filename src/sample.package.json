@@ -1,0 +1,25 @@
+{
+  "name": "@camsnz/vite-base",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {},
+  "exports": [
+    "./tsconfig.json",
+    "./tsconfig.app.json",
+    "./tsconfig.node.json",
+    "./vite.config.ts"
+  ],
+  "imports": {
+    "#*": [
+      "./src/*",
+      "./src/*.ts",
+      "./src/*.tsx"
+    ]
+  },
+  "dependencies": {
+    "camsnz/vite-base": "^0.0.0"
+  },
+  "devDependencies": {},
+  "packageManager": "npm@10.8.2"
+}
