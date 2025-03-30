@@ -1,24 +1,21 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig, UserConfig } from 'vite'
+import react from '@vitejs/plugin-react-swc'
+import tailwindcss from '@tailwindcss/vite';
 
-export const viteConfig = {
-  plugins: [
-    // TanStackRouterVite(),
-    react(),
-  ],
+export const config: UserConfig = {
+  plugins: [react(), tailwindcss()],
   css: {
     preprocessorOptions: {
-      scss: {}
+        scss: {}
     }
   },
+  appType: 'mpa',
+  publicDir: 'assets',
   build: {
     emptyOutDir: true,
     outDir: 'dist',
-  },
-  server: {
-    proxy: {},
-    // port: 1200,
-  },
-};
+  }
+}
 
-export default defineConfig(viteConfig)
+// https://vitejs.dev/config/
+export default defineConfig(config)
